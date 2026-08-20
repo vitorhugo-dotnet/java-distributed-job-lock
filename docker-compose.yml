@@ -12,3 +12,18 @@ services:
       interval: 5s
       timeout: 5s
       retries: 10
+
+  app:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+      DB_URL: jdbc:postgresql://db:5432/joblock
+      DB_USER: joblock
+      DB_PASSWORD: joblock
+    # Sem porta fixa no host: um mapeamento "8080:8080" quebraria o --scale app=3.
+    # Use "docker compose port app 1 8080" para descobrir a porta de cada replica.
+    ports:
+      - "8080"
