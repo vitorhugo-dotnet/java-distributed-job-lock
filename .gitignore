@@ -1,0 +1,53 @@
+## Java
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+replay_pid*
+
+## Maven
+target/
+.mvn/wrapper/maven-wrapper.jar
+pom.xml.versionsBackup
+
+## Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/**/build/
+
+## IntelliJ / Eclipse / VS Code
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.classpath
+.project
+.settings/
+bin/
+!**/src/**/bin/
+.vscode/
+
+## Spring Boot
+*.original
+application-local.properties
+application-local.yml
+
+## Logs e temporários
+*.log
+logs/
+*.tmp
+*.bak
+*.pid
+
+## Ambiente
+.env
+.env.local
+
+## SO
+.DS_Store
+Thumbs.db
+
